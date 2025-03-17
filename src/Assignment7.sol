@@ -6,13 +6,17 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract Assignment7 is ERC20 {
     // Constructor to initialize the token
     // Fill in the parameters for the token name and symbol
-    constructor() ERC20() {}
+    constructor(string memory _name,string memory _symbol ) ERC20(_name,_symbol) {
+        _name = "Salah";
+        _symbol = "SALAH";
+    }
 
     // Function to mint tokens
     // Fill in the visibility modifier to be external
     // Set params as to address and amount
-    function mint() {
+    function mint(address _to, uint _amount) external {
         // Fill in the logic
+        _mint(_to, _amount);
         // call _mint function with to and amount params
     }
 }
